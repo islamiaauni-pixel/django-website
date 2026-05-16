@@ -15,19 +15,11 @@ SECRET_KEY = os.getenv(
     "django-insecure-change-this-in-production"
 )
 
-# Set DEBUG=1 locally, DEBUG=0 in production
 DEBUG = os.getenv("DEBUG", "1") == "1"
 
-# Set in env like: ALLOWED_HOSTS=127.0.0.1,localhost,.railway.app
-ALLOWED_HOSTS = [
-    "django-website-production-8999.up.railway.app",
-    "welcoming-flexibility-production.up.railway.app",
-    "localhost",
-    "127.0.0.1"
-]
+ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://django-website-production-8999.up.railway.app",
     "https://welcoming-flexibility-production.up.railway.app"
 ]
 
