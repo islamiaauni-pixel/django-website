@@ -20,11 +20,14 @@ DEBUG = os.getenv("DEBUG", "1") == "1"
 
 # Set in env like: ALLOWED_HOSTS=127.0.0.1,localhost,.railway.app
 ALLOWED_HOSTS = [
+    "django-website-production-8999.up.railway.app",
     "welcoming-flexibility-production.up.railway.app",
-    "127.0.0.1",
-    "localhost"
+    "localhost",
+    "127.0.0.1"
 ]
+
 CSRF_TRUSTED_ORIGINS = [
+    "https://django-website-production-8999.up.railway.app",
     "https://welcoming-flexibility-production.up.railway.app"
 ]
 
